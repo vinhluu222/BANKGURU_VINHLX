@@ -277,8 +277,8 @@ public class AbstractPage {
 	}
 	
 	public EditCustomerPageObject openEditCustomerPage(WebDriver driver) {
-		waitToElementVisible(driver, AbstractPageUI.EDIT_ACCOUNT_LINK);
-		clickToElement(driver, AbstractPageUI.EDIT_ACCOUNT_LINK);
+		waitToElementVisible(driver, AbstractPageUI.EDIT_CUSTOMER_LINK);
+		clickToElement(driver, AbstractPageUI.EDIT_CUSTOMER_LINK);
 		return PageFactoryManager.getEditCustomerPage(driver);
 		
 	}

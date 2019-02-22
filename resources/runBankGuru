@@ -3,7 +3,7 @@
   <test name="Test">
   <parameter name="browser" value ="firefox" />
     <classes>
-      <class name="com.bankguru.account.Payment_01"/>
+      <class name="com.bankguru.account.Payment"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

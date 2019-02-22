@@ -13,4 +13,10 @@ public class Constant {
 	public static final String MOBILE = "4555442476";
 	public static final String PASSWORD = "automation";
 	
+	public static final String EDITED_ADDRESS = "PO Box 911  8331 Duis Avenue";
+	public static final String EDITED_CITY = "Tampa";
+	public static final String EDITED_STATE = "FL";
+	public static final String EDITED_PIN = "466250";
+	public static final String EDITED_MOBILE = "4555442476";
+
 }

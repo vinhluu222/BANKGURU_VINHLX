@@ -17,6 +17,10 @@ private WebDriver driver;
 		return isControlDisplayed(driver, NewCustomerPageUI.CHECK_PAGE_TEXT);
 	}
 	
+	public boolean isRegisteredSuccessfully() {
+		return isControlDisplayed(driver, NewCustomerPageUI.REGISTERED_MSG);
+	}
+	
 	public void inputToCustomerNameTextbox() {
 		waitToElementVisible(driver, NewCustomerPageUI.CUSTOMER_NAME_TEXTBOX);
 		sendKeysToElement(driver, NewCustomerPageUI.CUSTOMER_NAME_TEXTBOX, Constant.CUSTOMER_NAME);

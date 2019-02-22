@@ -12,6 +12,7 @@ import commons.Constant;
 import pageObjects.EditCustomerPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
+import pageObjects.NewAccountPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageObjects.PageFactoryManager;
 
@@ -21,6 +22,7 @@ public class Payment extends AbstractTest {
 	private HomePageObject homePage;
 	private NewCustomerPageObject newCustomerPage;
 	private EditCustomerPageObject editCustomerPage;
+	private NewAccountPageObject newAccountPage;
 	private String email, customerID;
 	
 	
@@ -28,7 +30,7 @@ public class Payment extends AbstractTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = openMultiBrowser(driver, "firefox");
+		driver = openMultiBrowser(browserName);
 		loginPage = PageFactoryManager.getLoginPage(driver);
 		loginPage.inputToUserTextbox(Constant.USER_ID_TO_LOGIN);
 		loginPage.inputToPasswordTextbox(Constant.PASSWORD_TO_LOGIN);
@@ -37,7 +39,7 @@ public class Payment extends AbstractTest {
 
 	@Test
 	public void TC_01_Create_New_Customer_Account_And_Check_Registered_Message() {
-		newCustomerPage = homePage.openNewCustomerPage(driver);
+		newCustomerPage = (NewCustomerPageObject) homePage.openDynamicPage(driver, "New Customer");
 		Assert.assertTrue(newCustomerPage.isNewCustomerPageDisplayed());
 		email = "automation" + randomNumber() + "@gmail.com";
 		newCustomerPage.inputToCustomerNameTextbox();
@@ -49,17 +51,30 @@ public class Payment extends AbstractTest {
 		newCustomerPage.inputToMobileNumberTextbox();
 		newCustomerPage.inputToEmailIDTextbox(email);
 		newCustomerPage.inputToPasswordTextbox();
-		Assert.assertTrue(newCustomerPage.isNewCustomerPageDisplayed());
+		newCustomerPage.clickToSubmitBtn();
+		Assert.assertTrue(newCustomerPage.isRegisteredSuccessfully());
 		customerID = newCustomerPage.getCustomerID();
 	}
 	
 	@Test
 	public void TC_02_Edit_Customer_Account_And_Check_Edited_Message() {
-		editCustomerPage = newCustomerPage.openEditCustomerPage(driver);
+		editCustomerPage = (EditCustomerPageObject)newCustomerPage.openDynamicPage(driver, "Edit Customer");
 		editCustomerPage.inputToCustomerIDTextbox(customerID);
 		editCustomerPage.clickToSubmitBtn();
+		editCustomerPage.inputToAddressTextbox();
+		editCustomerPage.inputToCityTextbox();
+		editCustomerPage.inputToSateTextbox();
+		editCustomerPage.inputToPinTextbox();
+		editCustomerPage.inputToMobileNumberTextbox();
+		editCustomerPage.inputToEmailIDTextbox(email);
+		editCustomerPage.clickToSubmitBtn();
+		Assert.assertTrue(editCustomerPage.isEditedSuccessfully());
 	}
 	
+	@Test
+	public void TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit() {
+		newAccountPage = (NewAccountPageObject) editCustomerPage.openDynamicPage(driver, "New Account");
+	}
 
 	@AfterClass
 	public void afterClass() {
