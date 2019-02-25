@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="13688" started-at="2019-02-21T09:21:40Z" finished-at="2019-02-21T09:21:54Z">
+  <suite name="Suite" duration-ms="21735" started-at="2019-02-22T08:54:53Z" finished-at="2019-02-22T08:55:15Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="13688" started-at="2019-02-21T09:21:40Z" finished-at="2019-02-21T09:21:54Z">
-      <class name="com.bankguru.account.Payment_01">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.bankguru.account.Payment_01@7921b0a2]" name="beforeClass" is-config="true" duration-ms="9535" started-at="2019-02-21T16:21:40Z" finished-at="2019-02-21T16:21:49Z">
+    <test name="Test" duration-ms="21735" started-at="2019-02-22T08:54:53Z" finished-at="2019-02-22T08:55:15Z">
+      <class name="com.bankguru.account.Payment">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="beforeClass" is-config="true" duration-ms="9656" started-at="2019-02-22T15:54:53Z" finished-at="2019-02-22T15:55:02Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Create_New_Customer_Account()[pri:0, instance:com.bankguru.account.Payment_01@7921b0a2]" name="Create_New_Customer_Account" duration-ms="4142" started-at="2019-02-21T16:21:49Z" finished-at="2019-02-21T16:21:54Z">
+        <test-method status="PASS" signature="TC_01_Create_New_Customer_Account_And_Check_Registered_Message()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_01_Create_New_Customer_Account_And_Check_Registered_Message" duration-ms="6425" started-at="2019-02-22T15:55:02Z" finished-at="2019-02-22T15:55:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Create_New_Customer_Account -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.bankguru.account.Payment_01@7921b0a2]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-02-21T16:21:54Z" finished-at="2019-02-21T16:21:54Z">
+        </test-method> <!-- TC_01_Create_New_Customer_Account_And_Check_Registered_Message -->
+        <test-method status="PASS" signature="TC_02_Edit_Customer_Account_And_Check_Edited_Message()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_02_Edit_Customer_Account_And_Check_Edited_Message" duration-ms="5639" started-at="2019-02-22T15:55:09Z" finished-at="2019-02-22T15:55:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Edit_Customer_Account_And_Check_Edited_Message -->
+        <test-method status="PASS" signature="TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit" duration-ms="0" started-at="2019-02-22T15:55:15Z" finished-at="2019-02-22T15:55:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-02-22T15:55:15Z" finished-at="2019-02-22T15:55:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.bankguru.account.Payment_01 -->
+      </class> <!-- com.bankguru.account.Payment -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

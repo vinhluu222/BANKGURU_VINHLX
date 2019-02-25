@@ -319,7 +319,7 @@ public class AbstractPage {
 			return PageFactoryManager.getNewCustomerPage(driver);
 		case "New Account":
 			return PageFactoryManager.getNewAccountPage(driver);
-		case "Edit Account":
+		case "Edit Customer":
 			return PageFactoryManager.getEditCustomerPage(driver);
 		case "Deposit":
 			return PageFactoryManager.getDepositPage(driver);
