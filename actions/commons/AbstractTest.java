@@ -19,7 +19,7 @@ public class AbstractTest {
 		if(browserName.equals("firefox")) {
 			driver = new FirefoxDriver();
 		}else if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", ".\\resoucers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", ".\\resources\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		

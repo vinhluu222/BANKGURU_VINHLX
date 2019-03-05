@@ -90,7 +90,7 @@ public class AbstractPage {
 		select.selectByVisibleText(valueInDropdown);
 	}
 
-	public String getSelectedItemInHtmlDropdown(WebDriver driver, String locator) {
+	public String selectedItemInHtmlDropdown(WebDriver driver, String locator) {
 		WebElement element = driver.findElement(By.xpath(locator));
 		Select select = new Select(element);
 		return select.getFirstSelectedOption().getText();
@@ -328,7 +328,7 @@ public class AbstractPage {
 		case "Balance Enquiry":
 			return PageFactoryManager.getBalanceEnquiryPage(driver);
 		default:
-			return PageFactoryManager.getTransferPage(driver);
+			return PageFactoryManager.getHomePage(driver);
 		}
 	}
 

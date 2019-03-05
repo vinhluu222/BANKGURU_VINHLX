@@ -9,12 +9,14 @@ import org.testng.annotations.Test;
 
 import commons.AbstractTest;
 import commons.Constant;
+import pageObjects.DepositPageObject;
 import pageObjects.EditCustomerPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.NewAccountPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageObjects.PageFactoryManager;
+import pageUIs.NewAccountPageUI;
 
 public class Payment extends AbstractTest {
 	private WebDriver driver;
@@ -23,7 +25,8 @@ public class Payment extends AbstractTest {
 	private NewCustomerPageObject newCustomerPage;
 	private EditCustomerPageObject editCustomerPage;
 	private NewAccountPageObject newAccountPage;
-	private String email, customerID;
+	private DepositPageObject depositPage;
+	private String email, customerID, currentAmount, accountNo;
 	
 	
 	
@@ -72,8 +75,23 @@ public class Payment extends AbstractTest {
 	}
 	
 	@Test
-	public void TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit() {
+	public void TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit_Are_Equal() {
 		newAccountPage = (NewAccountPageObject) editCustomerPage.openDynamicPage(driver, "New Account");
+		newAccountPage.inputToCustomerIDTextbox(customerID);
+		newAccountPage.selectAccountTypeDropdown("Current");
+		newAccountPage.inputToInitialDeposit(NewAccountPageUI.initialDepositValue);
+		newAccountPage.clickToSubmitBtn();
+		Assert.assertTrue(newAccountPage.isRegisteredMsgDisplayed());
+		currentAmount = newAccountPage.getCurrentAmount();
+		Assert.assertEquals(currentAmount, NewAccountPageUI.initialDepositValue);
+		accountNo = newAccountPage.getAccountNo();		
+	}
+	
+	@Test
+	public void TC_04_Transfer_Money_Into_Current_Account_And_ChecK_Account_Balance() {
+		depositPage = (DepositPageObject)newAccountPage.openDynamicPage(driver, "Deposit");
+		
+		
 	}
 
 	@AfterClass
