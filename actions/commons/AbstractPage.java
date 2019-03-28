@@ -78,9 +78,16 @@ public class AbstractPage {
 		WebElement element = driver.findElement(By.xpath(locator));
 		element.click();
 	}
-
+	
 	public void sendKeysToElement(WebDriver driver, String locator, String value) {
 		WebElement element = driver.findElement(By.xpath(locator));
+		element.sendKeys(value);
+	}
+
+	public void sendKeysToElement(WebDriver driver, String locator, String value, String... dynamicValue) {
+		locator = String.format(locator, (Object[]) dynamicValue);
+		WebElement element = driver.findElement(By.xpath(locator));
+		element.clear();
 		element.sendKeys(value);
 	}
 

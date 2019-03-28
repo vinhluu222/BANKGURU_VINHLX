@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="4" failed="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="21735" started-at="2019-02-22T08:54:53Z" finished-at="2019-02-22T08:55:15Z">
+  <suite name="Suite" duration-ms="50" started-at="2019-03-25T08:22:24Z" finished-at="2019-03-25T08:22:24Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="21735" started-at="2019-02-22T08:54:53Z" finished-at="2019-02-22T08:55:15Z">
+    <test name="Test" duration-ms="50" started-at="2019-03-25T08:22:24Z" finished-at="2019-03-25T08:22:24Z">
       <class name="com.bankguru.account.Payment">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="beforeClass" is-config="true" duration-ms="9656" started-at="2019-02-22T15:54:53Z" finished-at="2019-02-22T15:55:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="beforeClass(java.lang.String)[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-03-25T15:22:24Z" finished-at="2019-03-25T15:22:24Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by @Configuration on method beforeClass but has not been marked @Optional or defined
+in D:\Automation tool\Tutorial\BANKGURU_VINHLX\resources\runBankGuru.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by @Configuration on method beforeClass but has not been marked @Optional or defined
+in D:\Automation tool\Tutorial\BANKGURU_VINHLX\resources\runBankGuru.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:197)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_Create_New_Customer_Account_And_Check_Registered_Message()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_01_Create_New_Customer_Account_And_Check_Registered_Message" duration-ms="6425" started-at="2019-02-22T15:55:02Z" finished-at="2019-02-22T15:55:09Z">
+        <test-method status="SKIP" signature="TC_01_Create_New_Customer_Account_And_Check_Registered_Message()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_01_Create_New_Customer_Account_And_Check_Registered_Message" duration-ms="4" started-at="2019-03-25T15:22:24Z" finished-at="2019-03-25T15:22:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Create_New_Customer_Account_And_Check_Registered_Message -->
-        <test-method status="PASS" signature="TC_02_Edit_Customer_Account_And_Check_Edited_Message()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_02_Edit_Customer_Account_And_Check_Edited_Message" duration-ms="5639" started-at="2019-02-22T15:55:09Z" finished-at="2019-02-22T15:55:15Z">
+        <test-method status="SKIP" signature="TC_02_Edit_Customer_Account_And_Check_Edited_Message()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_02_Edit_Customer_Account_And_Check_Edited_Message" duration-ms="1" started-at="2019-03-25T15:22:24Z" finished-at="2019-03-25T15:22:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02_Edit_Customer_Account_And_Check_Edited_Message -->
-        <test-method status="PASS" signature="TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit" duration-ms="0" started-at="2019-02-22T15:55:15Z" finished-at="2019-02-22T15:55:15Z">
+        <test-method status="SKIP" signature="TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit_Are_Equal()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit_Are_Equal" duration-ms="1" started-at="2019-03-25T15:22:24Z" finished-at="2019-03-25T15:22:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-02-22T15:55:15Z" finished-at="2019-02-22T15:55:15Z">
+        </test-method> <!-- TC_03_Add_New_Account_And_Check_Current_Amount_And_Initial_Deposit_Are_Equal -->
+        <test-method status="SKIP" signature="TC_04_Transfer_Money_Into_Current_Account_And_ChecK_Account_Balance()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="TC_04_Transfer_Money_Into_Current_Account_And_ChecK_Account_Balance" duration-ms="0" started-at="2019-03-25T15:22:24Z" finished-at="2019-03-25T15:22:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04_Transfer_Money_Into_Current_Account_And_ChecK_Account_Balance -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.bankguru.account.Payment@7921b0a2]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-03-25T15:22:24Z" finished-at="2019-03-25T15:22:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
